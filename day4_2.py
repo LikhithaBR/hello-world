@@ -9,14 +9,17 @@ test_list = [{"fname": "abc01", "lname": "xyz02", "age": "32",
              ]
 
 value = input("Enter value: ")
+value1=input("Enter second value: ")
 
 
-def FindRec(test_list, value):
+def FindRec(test_list, value,value1):
         res = None
         for sub in test_list:
-            if sub['lname'] == value:
-                res = sub
-                continue
+            if sub['fname'] == value:
+                if sub['lname'] == value1:
+                    res = sub
+                    continue
+
 
 
         print("The filtered dictionary value is : " + str(res))
@@ -27,7 +30,7 @@ def FindRec(test_list, value):
 
 
 
-FindRec(test_list, value)
+FindRec(test_list, value,value1)
 
 
 
