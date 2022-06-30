@@ -9,19 +9,23 @@ test_list = [{"fname": "abc01", "lname": "xyz02", "age": "32",
              ]
 
 value = input("Enter value: ")
+value1=input("Enter second value: ")
 
 
-def FindRec(test_list, value):
+def FindRec(test_list, value,value1):
     count = 0
     for sub in test_list:
 
         if sub['fname'] == value:
-            count = count + 1
+            if sub['lname']==value1:
+                count = count + 1
+
+
 
     return count
 
 
-print(FindRec(test_list, value))
+print(FindRec(test_list, value,value1))
 
 
 
